@@ -1,0 +1,29 @@
+{
+  "name": "hubot-zerocater",
+  "version": "1.0.2",
+  "author": "Jon Ursenbach <jon@ursenba.ch>",
+  "description": "A Hubot plugin to tell you what ZeroCater is catering to your office for a given day.",
+  "keywords": [
+    "github",
+    "hubot",
+    "script",
+    "zerocater",
+    "zero cater",
+    "nom",
+    "food"
+  ],
+  "licenses" : [
+    {
+      "type" : "MIT"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jonursenbach/hubot-zerocater.git"
+  },
+  "main": "./src/zerocater",
+  "dependencies": {
+    "moment": "2.0.x",
+    "cheerio": "0.12.x"
+  }
+}
