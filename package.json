@@ -1,8 +1,8 @@
 {
   "name": "hubot-zerocater",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "Jon Ursenbach <jon@ursenba.ch>",
-  "description": "A Hubot plugin to tell you what ZeroCater is catering to your office for a given day.",
+  "description": "A Hubot plugin to tell you what ZeroCater is catering to your office today.",
   "keywords": [
     "github",
     "hubot",

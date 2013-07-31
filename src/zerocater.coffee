@@ -11,8 +11,6 @@
 #
 # Commands:
 #   hubot zerocater - Pulls your catering menu for today
-#   hubot zerocater tomorrow - Tomorrows catering menu
-#   hubot zerocater <day of week> - Catering menu for the given day of the week
 #
 # Author:
 #   jonursenbach
@@ -27,8 +25,6 @@ module.exports = (robot) =>
 getCatering = (msg, date) ->
   if date is false
     return msg.send 'I don\'t know when that is.'
-
-  console.log 'url=' + process.env.HUBOT_ZEROCATER_MENU_URL
 
   msg.http(process.env.HUBOT_ZEROCATER_MENU_URL)
     .get() (err, res, body) ->
