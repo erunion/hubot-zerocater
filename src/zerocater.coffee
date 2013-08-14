@@ -85,10 +85,14 @@ getCatering = (msg, date) ->
         menu.find('.item-list .item').each (i, elem) ->
           item = $(this).find('.item-name').text().trim()
           description = $(this).find('.item-description').text().trim()
+          instructions = $(this).find('.item-instructions').text().trim()
 
           emit += item + '\n'
           if (description != '')
             emit += ' - ' + description + '\n'
+
+          if (instructions != '')
+            emit += ' - Note: ' + instructions + '\n'
 
         msg.send emit
 
