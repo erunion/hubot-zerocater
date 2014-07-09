@@ -81,11 +81,11 @@ getCatering = (msg, date) ->
 
         cateringFound = true
 
-        emit = 'Catering for ' + searchDate + ' at ' + deliveryTime + ' is coming from ' + header.find('.vendor').text().trim() + '.\n\n'
-        menu.find('.item-list .item').each (i, elem) ->
-          item = $(this).find('.item-name').text().trim()
-          description = $(this).find('.item-description').text().trim()
-          instructions = $(this).find('.item-instructions').text().trim()
+        emit = 'Catering for ' + searchDate + ' at ' + deliveryTime + ' is coming from ' + header.find('.vendor').text().trim().split('\n')[0] + '.\n\n'
+        menu.find('.list-group-item').each (i, elem) ->
+          item = $(this).find('.item-name').text().trim().replace(/(\r\n|\n|\r)/gm,"")
+          description = $(this).find('.item-description').text().trim().replace(/(\r\n|\n|\r)/gm,"")
+          instructions = $(this).find('.item-instructions').text().trim().replace(/(\r\n|\n|\r)/gm,"")
 
           emit += item + '\n'
           if (description != '')
