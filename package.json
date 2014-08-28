@@ -21,7 +21,7 @@
     "type": "git",
     "url": "https://github.com/jonursenbach/hubot-zerocater.git"
   },
-  "main": "./src/zerocater",
+  "main": "index.coffee",
   "dependencies": {
     "moment": "2.0.x",
     "cheerio": "0.12.x"
